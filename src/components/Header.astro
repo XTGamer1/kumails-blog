@@ -1,58 +1,20 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
-import { Container, Nav } from 'react-bootstrap';
 ---
 
-<Header class="header" data-header>
-	<Container>
-	  <h1>
-		<Link href="#" class="logo">Pixel Coders</Link>
-	  </h1>
-  
-	  <Nav class="navbar container" data-navbar>
-		<ul class="navbar-list">
-  
-		  <li class="navbar-item">
-			<Link href="#home" class="navbar-link" data-nav-link>Home</Link>
-		  </li>
-  
-		  <li class="navbar-item">
-			<Link href="#services" class="navbar-link" data-nav-link>Services</Link>
-		  </li>
-  
-		  <li class="navbar-item">
-			<Link href="#features" class="navbar-link" data-nav-link>Features</Link>
-		  </li>
-  
-		  <!-- 
-			<li class="navbar-item">
-			  <Link href="#about" class="navbar-link" data-nav-link>About</Link>
-			</li>
-  
-			<li class="navbar-item">
-			  <Link href="#stats" class="navbar-link" data-nav-link>Stats</Link>
-			</li>
-  
-			<li class="navbar-item">
-			  <Link href="" class="navbar-link" data-nav-link>Contact Us</Link>
-			</li>
-		  -->
-  
-		</ul>
-	  </Nav>
-  
-	  <form action="https://discord.gg/EvuE59Pgpn">
-		<button class="btn btn-secondary">Join</button>
-	  </form>
-  
-	  <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggle-btn>
-		<ion-icon name="menu-outline" class="menu-icon"></ion-icon>
-		<ion-icon name="close-outline" class="close-icon"></ion-icon>
-	  </button>
-  
-	</Container>
-  </Header>
+<header>
+	<h2>
+		{SITE_TITLE}
+	</h2>
+	<nav>
+		<HeaderLink href="/">Home</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
+		<HeaderLink href="/about">About</HeaderLink>
+		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
+		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
+	</nav>
+</header>
 <style>
 	header {
 		margin: 0em 0 2em;
